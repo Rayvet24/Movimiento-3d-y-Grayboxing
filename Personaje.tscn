@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bexfo4xpyxrlv"]
+
+[ext_resource type="Script" uid="uid://ds7uaqtyo8syw" path="res://personaje.gd" id="1_s7vd6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ksd7g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s7vd6"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=637575195]
+script = ExtResource("1_s7vd6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1286208950]
+shape = SubResource("CapsuleShape3D_ksd7g")
+
+[node name="Area3D" type="Area3D" parent="CollisionShape3D" unique_id=1107865190]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Area3D" unique_id=817743641]
+shape = SubResource("CapsuleShape3D_s7vd6")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=899826360]

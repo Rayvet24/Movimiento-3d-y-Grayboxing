@@ -4,7 +4,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ksd7g"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s7vd6"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_s7vd6"]
+radius = 1.0039288
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s7vd6"]
 
@@ -21,7 +22,7 @@ shape = SubResource("CapsuleShape3D_ksd7g")
 [node name="Area3D" type="Area3D" parent="CollisionShape3D" unique_id=1107865190]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Area3D" unique_id=817743641]
-shape = SubResource("CapsuleShape3D_s7vd6")
+shape = SubResource("SphereShape3D_s7vd6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=533734477]
 mesh = SubResource("CapsuleMesh_s7vd6")

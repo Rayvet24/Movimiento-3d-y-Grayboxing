@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bglc27rrgj7xd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5h4tn"]
+radius = 0.73433715
+
+[sub_resource type="SphereMesh" id="SphereMesh_nghqc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4iok"]
+albedo_color = Color(1.6852883, 1.6852883, 0, 1)
+
+[node name="Moneda" type="Area3D" unique_id=1464151557]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=811518177]
+shape = SubResource("SphereShape3D_5h4tn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=627853309]
+mesh = SubResource("SphereMesh_nghqc")
+surface_material_override/0 = SubResource("StandardMaterial3D_r4iok")

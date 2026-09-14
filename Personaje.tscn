@@ -6,6 +6,10 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s7vd6"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s7vd6"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48aib"]
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=637575195]
 script = ExtResource("1_s7vd6")
 
@@ -17,4 +21,16 @@ shape = SubResource("CapsuleShape3D_ksd7g")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Area3D" unique_id=817743641]
 shape = SubResource("CapsuleShape3D_s7vd6")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=899826360]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1676545750]
+transform = Transform3D(1, 0, 0, 0, 0.9926098, 0.12134963, 0, -0.12134963, 0.9926098, 0, 1.2599053, 2.533358)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=533734477]
+mesh = SubResource("CapsuleMesh_s7vd6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1125946647]
+transform = Transform3D(0.30805802, 0.29568416, 0, 8.8116705e-09, -1.9751111e-08, 0.36, 0.20158753, -0.4518528, -1.57361e-08, 0.6353306, -2.069681e-08, -0.14165294)
+mesh = SubResource("CapsuleMesh_48aib")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=215138017]
+transform = Transform3D(0.25106084, -0.2737013, 0, -7.178318e-09, -1.8290365e-08, 0.3, -0.16422078, -0.4184347, -1.3113417e-08, -0.6685507, 0.00013519623, -0.12746578)
+mesh = SubResource("CapsuleMesh_48aib")

@@ -15,6 +15,11 @@ run/main_scene="uid://bexfo4xpyxrlv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+Recolectable=""
+Personaje=""
+
 [input]
 
 Jump={

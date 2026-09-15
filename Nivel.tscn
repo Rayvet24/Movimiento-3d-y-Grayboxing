@@ -1,22 +1,51 @@
 [gd_scene format=3 uid="uid://dp7xw72pgxgm8"]
 
-[ext_resource type="Texture2D" uid="uid://dobxy7ked8v8t" path="res://texture_09.png" id="1_xigpd"]
+[ext_resource type="Material" uid="uid://dt175jladk0wm" path="res://new_standard_material_3d.tres" id="1_0b6j0"]
 [ext_resource type="PackedScene" uid="uid://bexfo4xpyxrlv" path="res://Personaje.tscn" id="2_8g3sk"]
+[ext_resource type="Material" uid="uid://upxt2ri5gkgl" path="res://2new_standard_material_3d.tres" id="2_spw24"]
 [ext_resource type="PackedScene" uid="uid://bglc27rrgj7xd" path="res://moneda.tscn" id="3_c4cy6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8g3sk"]
-albedo_texture = ExtResource("1_xigpd")
+[node name="Nivel" type="Node3D" unique_id=2140903214]
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" unique_id=931795257]
+[node name="Grayboxing" type="CSGCombiner3D" parent="." unique_id=931795257]
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1479840125]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1.5)
-size = Vector3(10, 1, 10)
-material = SubResource("StandardMaterial3D_8g3sk")
+[node name="CSGBox3D" type="CSGBox3D" parent="Grayboxing" unique_id=1479840125]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -5.5)
+size = Vector3(10, 1, 18)
+material = ExtResource("1_0b6j0")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Grayboxing" unique_id=1717523267]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, -15)
+size = Vector3(10, 9, 1)
+material = ExtResource("2_spw24")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Grayboxing" unique_id=902774379]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 8, -20)
+size = Vector3(10, 1, 9)
+material = ExtResource("1_0b6j0")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Grayboxing" unique_id=374525831]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 12, -25)
+size = Vector3(11, 9, 1)
+material = ExtResource("2_spw24")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Grayboxing" unique_id=2007663709]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 18, -25)
+size = Vector3(12, 3, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Grayboxing" unique_id=139081828]
+transform = Transform3D(1.9499999, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 19, -30)
+size = Vector3(12, 1, 9)
+material = ExtResource("1_0b6j0")
 
 [node name="CharacterBody3D" parent="." unique_id=637575195 instance=ExtResource("2_8g3sk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="Moneda" parent="." unique_id=1464151557 instance=ExtResource("3_c4cy6")]
+[node name="monedas" type="Node3D" parent="." unique_id=231288328]
+
+[node name="Moneda" parent="monedas" unique_id=1464151557 instance=ExtResource("3_c4cy6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)
+
+[node name="Moneda2" parent="monedas" unique_id=22740217 instance=ExtResource("3_c4cy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 20, -27)

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 13
 var Double_Jump: bool
 
 func _physics_process(delta: float) -> void:
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	#Doble salto
 	if Input.is_action_just_pressed("Jump") and not is_on_floor() and Double_Jump == true:
-		velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY/1.7
 		Double_Jump = false
 	
 	#Movimiento básico
@@ -32,9 +32,9 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	#Rotar
-	if Input.is_action_just_pressed("Rotate cam left"):
+	if Input.is_action_pressed("Rotate cam left"):
 		rotate(Vector3.UP, 1 * delta)
-	if Input.is_action_just_pressed("Rotate cam right"):
+	if Input.is_action_pressed("Rotate cam right"):
 		rotate(Vector3.UP, -1 * delta)
 	
 	move_and_slide()
